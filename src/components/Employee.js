@@ -1,6 +1,19 @@
-function Employee( ) {
+function Employee( props ) {
 
-    return <h3>Here is an employee</h3>;
+    return (
+        <div>
+            <h3>Employee { props.name }</h3>
+            <p>
+            {props.role ? 
+            (
+                <p class="role">{props.role}</p>
+            ) : (
+                <p class="norole">No role</p> 
+            )
+            }
+            </p>
+        </div>
+    )
 }
 
 export default Employee;
